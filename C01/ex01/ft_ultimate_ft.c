@@ -6,10 +6,9 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 17:53:36 by marianasena       #+#    #+#             */
-/*   Updated: 2025/07/31 21:38:28 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/08/01 10:26:23 by marianasena      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
 
 void	ft_ultimate_ft(int *********nbr)
 {
