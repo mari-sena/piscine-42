@@ -6,28 +6,29 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 14:22:23 by marianasena       #+#    #+#             */
-/*   Updated: 2025/08/05 10:51:53 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/08/08 18:20:09 by marianasena      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_rev_int_tab(int *tab, int size)
 {
 	int	i;
-	int	newArr[size];
+	int	temp;
 
 	i = size;
-	while (i == 0)
+	temp = *tab;
+	while (i >= 0)
 	{
-		newArr[i] = tab[i];
+		temp = tab[i];
 		i--;
 	}
+	tab = &temp;
 }
 
-int	main(void)
+/*int	main(void)
 {
-	int	tab[4];
+	int	tab[4] = {1, 2, 3, 4};
 
-	tab[4] = {1, 2, 3};
-	ft_rev_int_tab(&tab, 4);
+	ft_rev_int_tab(tab, 4);
 	return (0);
-}
+}*/
