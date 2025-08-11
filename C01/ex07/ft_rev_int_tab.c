@@ -6,7 +6,7 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 14:22:23 by marianasena       #+#    #+#             */
-/*   Updated: 2025/08/10 17:36:12 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/08/11 17:25:05 by marianasena      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@ void	ft_rev_int_tab(int *tab, int size)
 	int	i;
 	int	temp;
 
-	i = size;
-	temp = *tab;
-	while (i >= 0)
+	i = 0;
+	while (i < size / 2)
 	{
-		temp += tab[i];
-		i--;
+		temp = tab[i];
+		tab[i] = tab[size - 1 - i];
+		tab[size - 1 - i] = temp;
+		i++;
 	}
-	tab = temp;
 }
 
 /*
