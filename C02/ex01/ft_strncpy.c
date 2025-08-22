@@ -6,33 +6,33 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 14:55:44 by marianasena       #+#    #+#             */
-/*   Updated: 2025/08/20 15:06:34 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/08/22 16:05:16 by marianasena      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-// N é a quantidade de caracteres que devem ser copiados em dest
-// Se src tem um length menor que N, só será copiado em dest apenas a quantidade descrita em N
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while(src[i] != '\0')
+	while(dest[i] != '\0')
 	{
-		if (i <= n)
+		if (i < n)
 			dest[i] = src[i];
 		else
-			dest[i] = '\0';
+			dest[i] = dest[i];
 		i++;
 	}
 	dest[i] = '\0';
 	return dest;
 }
 
+/*#include <string.h>
 #include <stdio.h>
 int	main(void)
 {
-	char	dest[8] = "Mariono";
-	printf("%s", ft_strncpy("Mariana", dest, 5));
+	char	dest[7] = "Worldl1";
+	printf("%s", ft_strncpy(dest, "Hello", 3));
+	//printf("%s", strncpy(dest, "Hello", 3));
 	return(0);
-}
+}*/
