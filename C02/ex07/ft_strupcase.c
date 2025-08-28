@@ -6,7 +6,7 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 18:22:33 by marianasena       #+#    #+#             */
-/*   Updated: 2025/08/27 21:12:42 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/08/27 21:13:55 by marianasena      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strupcase(char *str)
 			str[i] -= 32;
 		else
 			str[i] = str[i];
-		i++;	
+		i++;
 	}
 	return (str);
 }
