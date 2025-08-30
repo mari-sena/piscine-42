@@ -6,7 +6,7 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/13 18:47:33 by marianasena       #+#    #+#             */
-/*   Updated: 2025/08/20 14:53:51 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/08/23 17:46:43 by marianasena      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
-	return dest;
+	return (dest);
 }
 
 /*#include <stdio.h>
