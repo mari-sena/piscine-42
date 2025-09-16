@@ -6,20 +6,26 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 19:46:15 by marianasena       #+#    #+#             */
-/*   Updated: 2025/09/15 20:59:09 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/09/15 21:05:36 by marianasena      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	aux;
+	int	result;
 
 	aux = 0;
+	result = 0;
 	while (s1[aux] != '\0')
 	{
-	
+		int	temp;
+
+		temp =  s1[aux] - s2[aux];
+		result += temp;
+		aux++;
 	}
-	return (0);
+	return (result);
 }
 
 #include <string.h>
@@ -28,9 +34,11 @@ int	main(void)
 {
 	char	s1[6] = "maraa";
 	char	s2[6] = "marpo";
+	char	s3[6] = "maria";
+	char	s4[6] = "mario";
 
-	printf("Result: %d , Expected: -15\n", ft_strcmp("maraa", "marpo"));
-	printf("Result: %d , Expected: -14", ft_strcmp("maria", "mario"));
-	printf("%d", strcmp(s1, s2));
+	printf("Result: %d , Expected: -15\n", ft_strcmp(s1, s2));
+	printf("Result: %d , Expected: -14✅\n", ft_strcmp(s3, s4));
+	//printf("%d", strcmp(s1, s2));
 	return (0);
 }
