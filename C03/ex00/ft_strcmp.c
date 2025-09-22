@@ -6,9 +6,9 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 19:46:15 by marianasena       #+#    #+#             */
-/*   Updated: 2025/09/19 20:54:08 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/09/22 19:35:36 by marianasena      ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** *#
+/* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -17,20 +17,16 @@ int	ft_strcmp(char *s1, char *s2)
 
 	aux = 0;
 	result = 0;
-	while (s1[aux] != '\0')
+	while (s1[aux] != '\0' && result == 0)
 	{
-		int	temp;
-
-		temp =  s1[aux] - s2[aux];
-		printf("%d\n", temp);
-		result += temp;
+		result =  s1[aux] - s2[aux];
 		aux++;
 	}
 	return (result);
 }
 
-#include <string.h>
-//#include <stdio.h>
+/*#include <string.h>
+#include <stdio.h>
 int	main(void)
 {
 	char	s1[6] = "maraa";
@@ -42,4 +38,4 @@ int	main(void)
 	//printf("Result: %d | Expected: -14 ✅\n", ft_strcmp(s3, s4));
 	//printf("%d", strcmp(s1, s2));
 	return (0);
-}
+}*/
