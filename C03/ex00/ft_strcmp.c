@@ -6,22 +6,33 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 19:46:15 by marianasena       #+#    #+#             */
-/*   Updated: 2025/09/22 19:35:36 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/09/24 14:40:40 by marianasena      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_strsize(char str)
+{
+	str
+}
 
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	aux;
 	int	result;
+	int	s1size;
+	int	s2size;
 
 	aux = 0;
 	result = 0;
+	s1size = ft_strsize(s1);
+	s2size = ft_strsize(s2);
 	while (s1[aux] != '\0' && result == 0)
 	{
 		result =  s1[aux] - s2[aux];
 		aux++;
 	}
+	if (s2[aux] != '\0')
+		return (-s2[aux]);
 	return (result);
 }
 
