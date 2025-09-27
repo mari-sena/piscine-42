@@ -6,13 +6,35 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 19:45:04 by marianasena       #+#    #+#             */
-/*   Updated: 2025/09/25 19:56:39 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/09/27 17:42:57 by marianasena      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
+	unsigned int	aux;
+	char	result;
 
+	aux = 0;
+	result = 0;
+	while (s1[aux] == '\0' && result == 0 && aux <= n)
+	{
+		if (s1[aux] == s2[aux])
+			aux++;
+		else
+			result = s1[aux] - s2[aux];
+	}
+	return (result);
 }
 
+/*#include <stdio.h>
+#include <string.h>
 
+int	main(void)
+{
+	char	s1[5] = "mari";
+	char	s2[5] = "mare";
+
+	printf("%d \n", strncmp(s1, s2, 4));
+	return (0);
+}*/
