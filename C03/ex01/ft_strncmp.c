@@ -6,25 +6,28 @@
 /*   By: marianasena <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 19:45:04 by marianasena       #+#    #+#             */
-/*   Updated: 2025/09/30 20:10:24 by marianasena      ###   ########.fr       */
+/*   Updated: 2025/09/30 20:23:39 by marianasena      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	aux;
-	char	result;
+	char		result;
 
 	aux = 0;
 	result = 0;
 	while (result == 0 && aux < n)
 	{
 		if (s1[aux] != s2[aux])
+		{
 			result = s1[aux] - s2[aux];
+		}
 		else
+		{
 			aux++;
+		}
 	}
-	//if (s1[aux] == '\0' && result == 0)
 	return (result);
 }
 
